@@ -1,0 +1,64 @@
+[
+  {
+    "id": "20170132",
+    "invoicenr_full": "20170132",
+    "invoicenr": "20170132",
+    "reference": {
+      "line1": "",
+      "line2": "",
+      "line3": ""
+    },
+    "lines": {
+      "line1": {
+        "amount": 4,
+        "amount_desc": "",
+        "description": "Appels",
+        "tax_rate": 21,
+        "price": 13,
+        "discount_pct": 0,
+        "linetotal": 52
+      }
+    },
+    "profile": "1",
+    "discounttype": "percentage",
+    "discount": "0",
+    "paymentcondition": "U wordt vriendelijk verzocht de betaling te voldoen binnen %PAYMENT_PERIOD% dagen o.v.v. het factuurnummer %INVOICE_NUMBER%.",
+    "paymentperiod": "14",
+    "collection": "0",
+    "tax": "10.92",
+    "totalintax": "62.92",
+    "clientnr": "42",
+    "company": "Coolblue",
+    "contact": "J De Boer",
+    "address": "Weena 100",
+    "zipcode": "3010 AB",
+    "city": "Rotterdam",
+    "country": "146",
+    "phone": "",
+    "mobile": "",
+    "email": "b@c.nl",
+    "taxnumber": "",
+    "invoicenote": "",
+    "sent": "2017-05-09",
+    "uncollectible": "",
+    "lastreminder": "",
+    "open": "62.92",
+    "paiddate": "",
+    "taxes": {
+      "tax1": {
+        "rate": 21,
+        "sum": "10.92",
+        "sum_of": "52.00"
+      }
+    },
+    "payment_url": "https:\/\/www.factuursturen.nl\/pay?asdasd-g$",
+    "duedate": "2017-05-23",
+    "history": {
+      "item1": {
+        "date": "2017-05-09",
+        "time": "10:56",
+        "description": "Factuur verstuurd via e-mail"
+      }
+    }
+  }
+]

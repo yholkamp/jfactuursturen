@@ -1,0 +1,48 @@
+[
+  {
+    "duedate": "",
+    "id": "4",
+    "invoicenr_full": "2009-04",
+    "invoicenr": "2009-04",
+    "reference": {
+      "line1": "",
+      "line2": "",
+      "line3": ""
+    },
+    "lines": [],
+    "profile": "0",
+    "discounttype": "",
+    "discount": "0",
+    "paymentcondition": "",
+    "paymentperiod": "0",
+    "collection": "0",
+    "tax": "64.13",
+    "totalintax": "401.63",
+    "clientnr": "99",
+    "company": "Campina",
+    "contact": "J. de Bos",
+    "address": "Dorpsstraat 1",
+    "zipcode": "1234AB",
+    "city": "Zuidhoorn",
+    "country": "146",
+    "phone": "",
+    "mobile": "",
+    "email": "a@b.com",
+    "taxnumber": "",
+    "invoicenote": "",
+    "sent": "",
+    "uncollectible": "",
+    "lastreminder": "",
+    "open": "401.63",
+    "paiddate": "",
+    "taxes": {
+      "tax1": {
+        "rate": 19,
+        "sum": "64.13",
+        "sum_of": "0.00"
+      }
+    },
+    "payment_url": "https:\/\/www.factuursturen.nl\/pay?asdasd",
+    "history": []
+  }
+]
