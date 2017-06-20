@@ -3,6 +3,7 @@
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty
 import org.joda.time.DateTime
+import java.util.HashMap
 
 data class Invoice(
         var id: String,
@@ -15,7 +16,7 @@ data class Invoice(
         // Contains reference lines on the invoice. 'line1', 'line2', 'line3'. All are Strings
         var reference: Reference,
         // All invoice lines on the invoice
-        var lines: Map<String, InvoiceLine>?,
+        var lines: Map<String, InvoiceLine> = HashMap(),
         // The ID of the used profile. Default is default profile
         var profile: Int?,
         // The type of discount. 'amount' or 'percentage'

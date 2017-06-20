@@ -1,6 +1,7 @@
 ﻿package net.nextpulse.jfactuursturen.models
 
 import org.joda.time.DateTime
+import java.util.*
 
 /**
  * Object containing the required/available fields when creating a new invoice
