@@ -1,24 +1,14 @@
 package net.nextpulse.jfactuursturen.models
 
-import com.fasterxml.jackson.annotation.JsonProperty
-import java.util.*
+import org.joda.time.DateTime
 
 /**
- *
+ * Filtering object used when listing all invoices.
+ * 
  * @author yholkamp
  */
 data class InvoiceFilter(
         var filter: FilterType? = null,
-        var since: Date? = null,
-        var until: Date? = null
+        var since: DateTime? = null,
+        var until: DateTime? = null
 )
-
-enum class FilterType {
-    open,
-    overdue,
-    sent,
-    partly,
-    toomuch,
-    paid,
-    uncollectible
-}
