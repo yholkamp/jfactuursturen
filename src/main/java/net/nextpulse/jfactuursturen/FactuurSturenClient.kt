@@ -6,8 +6,8 @@ import net.nextpulse.jfactuursturen.models.NewInvoice
 import net.nextpulse.jfactuursturen.util.BasicAuthApiClient
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import org.joda.time.DateTime
-import java.lang.IllegalArgumentException
+import org.joda.time.format.DateTimeFormat
+import org.joda.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -22,6 +22,7 @@ open class FactuurSturenClient constructor(username: String, apiKey: String) : B
         val logger: Logger = LogManager.getLogger()
         val API_HOST = "www.factuursturen.nl"
         val API_PATH = "api/v1"
+        val FILTER_TIME_FORMAT: DateTimeFormatter = DateTimeFormat.forPattern("yyyy-MM-dd")
     }
 
     /**
@@ -37,10 +38,10 @@ open class FactuurSturenClient constructor(username: String, apiKey: String) : B
             urlBuilder.addQueryParameter("filter", filter.filter.toString())
         }
         if (filter.since != null) {
-            urlBuilder.addQueryParameter("since", DateTime(filter.since).toString("YYYY-mm-dd"))
+            urlBuilder.addQueryParameter("since", FILTER_TIME_FORMAT.print(filter.since))
         }
         if (filter.until != null) {
-            urlBuilder.addQueryParameter("until", DateTime(filter.until).toString("YYYY-mm-dd"))
+            urlBuilder.addQueryParameter("until", FILTER_TIME_FORMAT.print(filter.until))
         }
         urlBuilder.addQueryParameter("count", count.toString())
         urlBuilder.addQueryParameter("offset", offset.toString())
@@ -78,13 +79,13 @@ open class FactuurSturenClient constructor(username: String, apiKey: String) : B
 
     /**
      * Returns the country code to country name mapping from the FactuurSturen API.
-     * 
+     *
      * @param language language to use for the country names, defaults to 'nl'
      */
-    @JvmOverloads fun getCountryList(language: String = "nl") : Map<String, String> {
+    @JvmOverloads fun getCountryList(language: String = "nl"): Map<String, String> {
         // TODO: implement an actual API request
         if (language == "nl") {
-            val countries = HashMap<String, String> ()
+            val countries = HashMap<String, String>()
             countries.put("146", "Nederland")
             countries.put("226", "Verenigde Staten")
             return countries
