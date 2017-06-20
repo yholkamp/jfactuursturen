@@ -7,6 +7,8 @@ import net.nextpulse.jfactuursturen.util.BasicAuthApiClient
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.joda.time.DateTime
+import java.lang.IllegalArgumentException
+import java.util.*
 
 
 /**
@@ -72,6 +74,23 @@ open class FactuurSturenClient constructor(username: String, apiKey: String) : B
      */
     fun deleteInvoice(invoiceId: Long): Unit {
         deleteRequest("invoices", invoiceId)
+    }
+
+    /**
+     * Returns the country code to country name mapping from the FactuurSturen API.
+     * 
+     * @param language language to use for the country names, defaults to 'nl'
+     */
+    @JvmOverloads fun getCountryList(language: String = "nl") : Map<String, String> {
+        // TODO: implement an actual API request
+        if (language == "nl") {
+            val countries = HashMap<String, String> ()
+            countries.put("146", "Nederland")
+            countries.put("226", "Verenigde Staten")
+            return countries
+        } else {
+            throw IllegalArgumentException("Not yet implemented")
+        }
     }
 
 }
