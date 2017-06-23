@@ -16,7 +16,7 @@ data class Invoice(
         // Contains reference lines on the invoice. 'line1', 'line2', 'line3'. All are Strings
         var reference: Reference,
         // All invoice lines on the invoice
-        var lines: Map<String, InvoiceLine> = HashMap(),
+        var lines: Map<String, InvoiceLine>? = HashMap(),
         // The ID of the used profile. Default is default profile
         var profile: Int?,
         // The type of discount. 'amount' or 'percentage'
