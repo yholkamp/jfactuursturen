@@ -107,5 +107,8 @@ data class Invoice(
         var frequency: Frequencies?,
 
         // Set if the recurring invoice is automatically sent by our system
-        var repeatType: RepeatTypes?
+        var repeatType: RepeatTypes?,
+        
+        // New undocumented field
+        var category: String?
 )
