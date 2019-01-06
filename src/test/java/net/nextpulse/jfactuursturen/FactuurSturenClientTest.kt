@@ -1,8 +1,6 @@
 package net.nextpulse.jfactuursturen
 
-import com.nhaarman.mockito_kotlin.doAnswer
-import com.nhaarman.mockito_kotlin.doReturn
-import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockitokotlin2.*
 import net.nextpulse.jfactuursturen.models.Invoice
 import net.nextpulse.jfactuursturen.util.BasicAuthApiClient
 import okhttp3.*
