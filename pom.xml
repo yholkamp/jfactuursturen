@@ -4,7 +4,7 @@
 
   <groupId>net.nextpulse</groupId>
   <artifactId>jfactuursturen</artifactId>
-  <version>0.2.3-SNAPSHOT</version>
+  <version>0.2.3</version>
   <packaging>jar</packaging>
   <url>https://github.com/yholkamp/jfactuursturen</url>
   <name>JFactuurSturen</name>
@@ -30,7 +30,7 @@
     <connection>scm:git:git@github.com:yholkamp/jfactuursturen.git</connection>
     <developerConnection>scm:git:git@github.com:yholkamp/jfactuursturen.git</developerConnection>
     <url>scm:git:git@github.com:yholkamp/jfactuursturen.git</url>
-    <tag>HEAD</tag>
+    <tag>0.2.3</tag>
   </scm>
 
   <properties>
