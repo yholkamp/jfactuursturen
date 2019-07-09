@@ -33,3 +33,8 @@ Call the code as follows:
 ## To be implemented
 
 * All other API methods
+
+
+## Deploying a new version
+
+    mvn -P release -Dresume=false release:prepare release:perform
